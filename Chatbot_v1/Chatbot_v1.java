@@ -18,13 +18,17 @@ public static void main(String[] args)
 	Boolean endChatbot = false;
 	String input;
 	while ( endChatbot == false ) {
-		//System.out.println(i);
+		System.out.println(i);
 		if ( i >= response.length ) {
 			endChatbot = true;
+		}else if (i == 48) {
+			statement[i] = "Chatbot: " + "We are about to run out of memory." +
+											"\nChatbot: GoodBye.";;
+			System.out.println(statement[i]);
 		} else {
 			input = in.nextLine();
 			response[i] = "\nYou: " + input;
-			statement[i] = "Chatbot: " + "Cool tell me more";
+			statement[i] = "Chatbot: " + "Cool tell me more.\n";
 			System.out.println(response[i]);
 			System.out.println(statement[i]);
 		}
