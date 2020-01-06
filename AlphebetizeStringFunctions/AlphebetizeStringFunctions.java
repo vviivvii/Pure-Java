@@ -3,6 +3,9 @@ public class AlphebetizeStringFunctions {
   //Global Variables
   public static String alphabet = "  The  quick  brown fox jumps  over the  lazy dog.";
 
+public static String word[];
+public static float word[];
+
   public static void main (String[] args)
   {
     System.out.println(alphabet);
@@ -16,14 +19,58 @@ public class AlphebetizeStringFunctions {
     //System.out.println(periodPositionB); //Problem if false
     remainingPhrase = remainingPhrase.substring(0, periodPositionI);
     //Create Substrings for all words
-    int word1space = remainingPhrase.indexOf(" ");
-    String word1 = remainingPhrase.substring(0, word1space);
-    Boolean word1True;
-    if ( word1space == word1.length() ) {
-      word1True = true;
+    int word[i]space = remainingPhrase.indexOf(" ");
+    String word[i] = remainingPhrase.substring(0, word[i]space);
+    Boolean word[i]True;
+    if (word[0]space == word[0].length()) {
+      word[0]True = true;
     } else {
-      word1True = false; //Problem if false
+      word[0]True = false; //Problem if false
     }
+
+    int i = 0;
+    while (stop = false) {
+      remainingPhrase = remainingPhrase.trim();
+      periodPositionI = remainingPhrase.length();
+      try {
+        wordspace[i] = remainingPhrase.indexOf(" ");
+        word[i] = remainingPhrase.substring(0, wordspace[i]);
+        System.out.println(word[i]);
+    }
+    catch(stringIndexOutOfBoundsException e1) {
+      word[i] = remainingPhrase.substring(0, wordspace[i]);
+      System.out.println(word[i]);
+      stop = true;
+    }
+    i++;
+    remainingPhrase = remainingPhrase.substring(wordspace[i-1], periodPositionI);
+  }
+
+  /*
+  remainingPhrase = remainingPhrase.substring(wordspace[i-1], periodPositionI);
+remainingPhrase = remainingPhrase.trim();
+periodPositionI = remainingPhrase.length();
+wordspace[i] = remainingPhrase.indexOf(" ");
+wordspace[i] = periodPositionI;
+word[i] = remainingPhrase.substring(0, periodPositionI);
+stop = true;
+System.out.println(word[i]);
+I++;
+
+while() {
+
+I++;
+}
+
+Try {}  catch() {
+
+}
+
+If() {} else {
+
+}
+*/
+  /*
     System.out.println(word1);
     remainingPhrase = remainingPhrase.substring(word1space, periodPositionI);
     remainingPhrase = remainingPhrase.trim();
@@ -77,8 +124,8 @@ public class AlphebetizeStringFunctions {
     remainingPhrase = remainingPhrase.substring(word8space, periodPositionI);
     remainingPhrase = remainingPhrase.trim();
     periodPositionI = remainingPhrase.length();
-    int word9space = remainingPhrase.indexOf(" ");
-    String word9 = remainingPhrase.substring(0, word9space);
+    String word9 = remainingPhrase.substring(0, periodPositionI);
     System.out.println(word9);
+    */
   }
 }
