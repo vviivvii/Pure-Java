@@ -10,10 +10,7 @@ public static void main(String[] args)
 {
 	Scanner in = new Scanner ( System.in );
 	System.out.println("\nHello my name is Chatbot"+"\nLet's Talk");
-	//
-	statement[statement.length-1] = "\nWe are about to run out of memory" +
-									"\nGoodBye.";
-	//
+	
 	int i=0;
 	double x=0;
 	Boolean endChatbot = false;
