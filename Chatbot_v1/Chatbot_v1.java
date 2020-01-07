@@ -15,10 +15,11 @@ public static void main(String[] args)
 									"\nGoodBye.";
 	//
 	int i=0;
+	double x=0;
 	Boolean endChatbot = false;
 	String input;
 	while ( endChatbot == false ) {
-		System.out.println(i);
+		//System.out.println(i);
 		if ( i >= response.length ) {
 			endChatbot = true;
 		}else if (i == 48) {
@@ -28,7 +29,14 @@ public static void main(String[] args)
 		} else {
 			input = in.nextLine();
 			response[i] = "\nYou: " + input;
-			statement[i] = "Chatbot: " + "Cool tell me more.\n";
+			 x = ((Math.random() * 2) + 1);
+			 if (x >= 2) {
+				 statement[i] = "Chatbot: " + "Very nice!\n";
+				 //System.out.println(x);
+			 }	else if (x <= 2 ){
+				 statement[i] = "Chatbot: " + "Cool tell me more.\n";
+				 //System.out.println(x);
+			 }
 			System.out.println(response[i]);
 			System.out.println(statement[i]);
 		}
