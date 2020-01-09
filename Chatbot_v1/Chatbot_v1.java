@@ -21,7 +21,7 @@ public static void main(String[] args)
 			endChatbot = true;
 		}else if (i == 48) {
 			statement[i] = "Chatbot: " + "We are about to run out of memory." +
-											"\nChatbot: GoodBye.";;
+											"\nChatbot: GoodBye.\n";;
 			System.out.println(statement[i]);
 		} else {
 			input = in.nextLine();
