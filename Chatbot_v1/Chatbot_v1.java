@@ -15,33 +15,36 @@ public static void main(String[] args)
 	double x=0;
 	Boolean endChatbot = false;
 	String input;
+	String no = "no";
 	while ( endChatbot == false ) {
 		//System.out.println(i);
 		if ( i >= response.length ) {
 			endChatbot = true;
 		}else if (i == 48) {
 			statement[i] = "Chatbot: " + "We are about to run out of memory." +
-											"\nChatbot: GoodBye.\n";;
+											"\nChatbot: GoodBye.\n";
 			System.out.println(statement[i]);
 		} else {
 			input = in.nextLine();
 			response[i] = "\nYou: " + input;
 			 x = ((Math.random() * 4) + 1);
-			 if (x >= 2 && x <= 3 ) {
+			  if (x >= 2 && x <= 3 ) {
 				 statement[i] = "Chatbot: " + "Very nice!\n";
-				//System.out.println(x);
 			 }	else if (x <= 2){
 				 statement[i] = "Chatbot: " + "Cool tell me more.\n";
-				 //System.out.println(x);
-			 }else if (x >= 3 && x <= 4){
+			 } else if (x >= 3 && x <= 4){
 				 statement[i] = "Chatbot: " + "You don't say.\n";
-				 //System.out.println(x);
-			 }else if (x >= 4){
+			 } else if (x >= 4){
 				 statement[i] = "Chatbot: " + "Interesting, tell me more.\n";
-				 //System.out.println(x);
+				 /*
+				 || Chatbot responses ||
+				*/
+			} if (input.equals(no) == true ) {
+				 statement[i] = "Chatbot: " + "Okay cool\n";
 			 }
 			System.out.println(response[i]);
 			System.out.println(statement[i]);
+			//System.out.println(x);
 		}
 		i++;
   }
