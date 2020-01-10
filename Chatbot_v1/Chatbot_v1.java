@@ -15,7 +15,9 @@ public static void main(String[] args)
 	double x=0;
 	Boolean endChatbot = false;
 	String input;
+	//Types of Chatbot responses
 	String no = "no";
+	
 	while ( endChatbot == false ) {
 		//System.out.println(i);
 		if ( i >= response.length ) {
