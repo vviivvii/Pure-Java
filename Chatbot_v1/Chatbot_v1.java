@@ -17,7 +17,8 @@ public static void main(String[] args)
 	String input;
 	//Types of Chatbot responses
 	String no = "no";
-	
+	String chatbot = "chatbot";
+	String hello = "hello";
 	while ( endChatbot == false ) {
 		//System.out.println(i);
 		if ( i >= response.length ) {
@@ -43,10 +44,14 @@ public static void main(String[] args)
 				*/
 			} if (input.equals(no) == true ) {
 				 statement[i] = "Chatbot: " + "Okay cool\n";
-			 }
+			 } if (input.equals(chatbot) == true ) {
+ 				 statement[i] = "Chatbot: " + "That's my name.\n";
+ 			 }
+			 if (input.equals(hello) == true ) {
+ 				 statement[i] = "Chatbot: " + "Hello user.\n";
+ 			 }
 			System.out.println(response[i]);
 			System.out.println(statement[i]);
-			//System.out.println(x);
 		}
 		i++;
   }
