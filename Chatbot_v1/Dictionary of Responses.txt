@@ -1,5 +1,6 @@
 Chatbot is case sensitive 
 no
+yes
 chatbot
 hello
 mother
