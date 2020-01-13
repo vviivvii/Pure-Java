@@ -9,7 +9,8 @@ public static String[] response = new String[49];
 public static void main(String[] args)
 {
 	Scanner in = new Scanner ( System.in );
-	System.out.println("\nHello my name is Chatbot"+"\nLet's Talk");
+	System.out.println("<System> " + "See Dictionary of Responses to talk to Chatbot");
+	System.out.println("\nChatbot: " + "Hello my name is Chatbot"+ "\nChatbot: " + "Let's Talk\n");
 
 	int i=0;
 	double x=0;
@@ -19,8 +20,11 @@ public static void main(String[] args)
 	String no = "no";
 	String chatbot = "chatbot";
 	String hello = "hello";
+	String mother = "mother";
+	String father = "father";
+	String sister = "sister";
+	String brother = "brother";
 	while ( endChatbot == false ) {
-		//System.out.println(i);
 		if ( i >= response.length ) {
 			endChatbot = true;
 		}else if (i == 48) {
@@ -43,12 +47,15 @@ public static void main(String[] args)
 				 || Chatbot responses ||
 				*/
 			} if (input.equals(no) == true ) {
-				 statement[i] = "Chatbot: " + "Okay cool\n";
+				 statement[i] = "Chatbot: " + "That was mean of you.\n";
 			 } if (input.equals(chatbot) == true ) {
  				 statement[i] = "Chatbot: " + "That's my name.\n";
  			 }
 			 if (input.equals(hello) == true ) {
  				 statement[i] = "Chatbot: " + "Hello user.\n";
+ 			 }
+			 if (input.equals(mother) == true || input.equals(father) == true || input.equals(sister) == true || input.equals(brother) == true) {
+ 				 statement[i] = "Chatbot: " + "Tell me more about your family.\n";
  			 }
 			System.out.println(response[i]);
 			System.out.println(statement[i]);

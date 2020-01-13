@@ -1,0 +1,8 @@
+Chatbot is case sensitive 
+no
+chatbot
+hello
+mother
+father
+sister
+brother
