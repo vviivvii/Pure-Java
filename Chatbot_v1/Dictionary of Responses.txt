@@ -1,9 +1,10 @@
-Chatbot is case sensitive 
-no
-yes
-chatbot
-hello
-mother
-father
-sister
-brother
+Know that the Chatbot is case sensitive, This is what you can say to the chatbot. Yes you can only say one word.
+
+ no
+ yes
+ chatbot
+ hello
+ mother
+ father
+ sister
+ brother
