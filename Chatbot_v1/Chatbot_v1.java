@@ -9,7 +9,7 @@ public static String[] response = new String[49];
 public static void main(String[] args)
 {
 	Scanner in = new Scanner ( System.in );
-	System.out.println("<System> " + "See Dictionary of Responses to talk to Chatbot");
+	System.out.println("\n<System> " + "See Dictionary of Responses to talk to Chatbot");
 	System.out.println("\nChatbot: " + "Hello my name is Chatbot"+ "\nChatbot: " + "Let's Talk\n");
 
 //Variables
@@ -24,10 +24,10 @@ public static void main(String[] args)
 	String yes = "yes";
 	String chatbot = "chatbot";
 	String hello = "hello";
-	String mother = "mother";
-	String father = "father";
-	String sister = "sister";
-	String brother = "brother";
+	String mother = "I have a mother";
+	String father = "I have a father";
+	String sister = "I have a sister";
+	String brother = "I have a brother";
 	String noResponse = "";
 
 //Chatbot code
@@ -52,9 +52,12 @@ public static void main(String[] args)
 				 statement[i] = "Chatbot: " + "Interesting, tell me more.\n";
 			 }
 				 /*
-				 --|| Chatbot responses ||--
+				                      							  --|| Chatbot responses ||--
+				 *If an input becomes true, Chatbot would have an statement to say and will overight the random response.
+				 *If all of the input are false the statement would stay as a random response.
+
 				*/
-				if (nothing >= 20) { // If the user said nothing in 20 lines pr more the chatbot would ask the user to say something.
+				if (nothing >= 20) { // If the user said nothing in 20 lines or more the chatbot would ask the user to say something.
  				  statement[i] = "Chatbot: " + "Can you say soemthing?\n";
  			 } if (input.equals(no) == true ) {
 				 statement[i] = "Chatbot: " + "That was mean of you.\n";
@@ -64,12 +67,15 @@ public static void main(String[] args)
  				 statement[i] = "Chatbot: " + "That's my name.\n";
  			 }if (input.equals(hello) == true ) {
  				 statement[i] = "Chatbot: " + "Hello user.\n";
- 			 }if (input.equals(mother) == true || input.equals(father) == true || input.equals(sister) == true || input.equals(brother) == true) {
- 				 statement[i] = "Chatbot: " + "Tell me more about your family.\n";
+ 			 }if (input.equals(mother) == true || input.equals(father) == true) {
+ 				 statement[i] = "Chatbot: " + "Do they have a job?\n";
+			 }if ( input.equals(sister) == true || input.equals(brother) == true) {
+ 				 statement[i] = "Chatbot: " + "Do they play any sports?\n";
+			 }
 
 
 				//If the user is not talking (User keeps on pressing/holding enter) the chatbot would ask the user to say something.
- 			 }if (input.equals(noResponse) == true ) {
+ 			 if (input.equals(noResponse) == true ) {
 				 nothing++;
 			 }else { // The counter would go down by two if the user says something.
 				 nothing--;
@@ -79,7 +85,7 @@ public static void main(String[] args)
 			System.out.println(response[i]);
 			System.out.println(statement[i]);
 		}
-		i++;
+		i++; // add one to change "lines"
   }
  }
 }

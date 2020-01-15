@@ -1,10 +1,10 @@
-Know that the Chatbot is case sensitive, This is what you can say to the chatbot. Yes you can only say one word.
+Know that the Chatbot is case sensitive, This is what you can say to the chatbot.
 
  no
  yes
  chatbot
  hello
- mother
- father
- sister
- brother
+ I have a mother
+ I have a father
+ I have a sister
+ I have a brother
