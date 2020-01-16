@@ -9,6 +9,7 @@ public static String[] response = new String[49];
 public static void main(String[] args)
 {
 	Scanner in = new Scanner ( System.in );
+	//Chatbot's Greeting
 	System.out.println("\n<System> " + "See Dictionary of Responses to talk to Chatbot");
 	System.out.println("\nChatbot: " + "Hello my name is Chatbot"+ "\nChatbot: " + "Let's Talk\n");
 
@@ -35,21 +36,28 @@ public static void main(String[] args)
 		if ( i >= response.length ) {
 			endChatbot = true;
 		}else if (i == 48) {
-			statement[i] = "Chatbot: " + "We are about to run out of memory." + "\nChatbot: GoodBye.\n";
+			statement[i] = "Chatbot: " + "We are about to run out of memory.\n" + "Chatbot: GoodBye.\n";
 			System.out.println(statement[i]);
 		} else {
 			input = in.nextLine();
-			response[i] = "\nYou: " + input;
+			if (i == 15) {
+				response[i] = input;
+			} else {
+				response[i] = "\nYou: " + input;
+			}
+
 			//Chatbot's Random Responses.
-			 x = ((Math.random() * 4) + 1);
+			 x = ((Math.random() * 5) + 1);
 			  if (x >= 2 && x <= 3 ) {
 				 statement[i] = "Chatbot: " + "Very nice!\n";
 			 }	else if (x <= 2){
 				 statement[i] = "Chatbot: " + "Cool tell me more.\n";
 			 } else if (x >= 3 && x <= 4){
 				 statement[i] = "Chatbot: " + "You don't say.\n";
-			 } else if (x >= 4){
+			 } else if (x >= 4 && x < 5){
 				 statement[i] = "Chatbot: " + "Interesting, tell me more.\n";
+			 } else if (x >= 5){
+				 statement[i] = "Chatbot: " + "Thats cool you like " + input + " right?\n";
 			 }
 				 /*
 				                      							  --|| Chatbot responses ||--
@@ -71,7 +79,16 @@ public static void main(String[] args)
  				 statement[i] = "Chatbot: " + "Do they have a job?\n";
 			 }if ( input.equals(sister) == true || input.equals(brother) == true) {
  				 statement[i] = "Chatbot: " + "Do they play any sports?\n";
+			 }if (i == 30) {
+				 statement[i] = "Chatbot: " + "Remember what you said at line 15?\n" + "Chatbot: " + "Can you say it?\n";
+			 }if (i == 31) {
+				 if (input.equals(statement[15]) == true ){ // Saying it right won't make the statement true [bug]
+					 statement[i] = "Chatbot: " + "Your right! Good on you.\n";
+				 }else {
+					 statement[i] = "Chatbot: " + "Well you said " + response[15] + ".\n";
+				 }
 			 }
+
 
 
 				//If the user is not talking (User keeps on pressing/holding enter) the chatbot would ask the user to say something.
@@ -82,7 +99,11 @@ public static void main(String[] args)
 				 nothing--;
 			 }
 			//To show the user (response) and chatbot (statement) talking.
-			System.out.println(response[i]);
+			if (i == 15){
+				System.out.println("\nYou: " + input);
+			}else{
+				System.out.println(response[i]);
+			}
 			System.out.println(statement[i]);
 		}
 		i++; // add one to change "lines"
