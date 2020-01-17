@@ -30,6 +30,7 @@ public static void main(String[] args)
 	String sister = "I have a sister";
 	String brother = "I have a brother";
 	String noResponse = "";
+	String goodbye = "goodbye";
 
 //Chatbot code
 	while ( endChatbot == false ) {
@@ -87,6 +88,9 @@ public static void main(String[] args)
 				 }else {
 					 statement[i] = "Chatbot: " + "Well you said " + response[15] + ".\n";
 				 }
+			 }if (input.equals(goodbye) == true ){
+				 statement[i] = "Chatbot: " + "That was fast... GoodBye.\n";
+				 endChatbot = true;
 			 }
 
 
